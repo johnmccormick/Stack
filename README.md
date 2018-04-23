@@ -2,7 +2,7 @@
 
 I've written this program as an attempt to demonstrate how SLL elements function within a stack structure, as a sort of reference or proof of concept, mainly to service my own understanding of data structures and pointers. The output is designed to demonstrate a standard FILO process, as well as the sequence in which memory is allocated to the heap and deallocated. Comments are fairly detailed, so hopefully this helps anyone currently trying to understand SSLs, pointers, and pointers to pointers.
 
-Usage is straightforward. The program starts by asking how many 'elements' you would like to push (each element has an integer data field which is randomly generated). You can pick an arbitrary number between 1 and 999999. You are then asked the number of elements you would like to pop. Once the program is happy with those values, the process of pushing elements begins, with the push function outputing the address, data, and index for each element as it pushes them. Then, provided a number of pops was requested (you can pick 0), a similar process goes on for popping elements. After this, all of the elements remaining in the stack structure are displayed. 
+Usage is straightforward. The program starts by asking how many elements you would like to push (each element has an integer data field which is randomly generated). You can pick an arbitrary number between 1 and 999999. You are then asked the number of elements you would like to pop. Once the program is happy with those values, the process of pushing elements begins, with the push function outputing the address, data, and index for each element as it pushes them. Then, provided a number of pops was requested (you can pick 0), a similar process goes on for popping elements. After this, all of the elements remaining in the stack structure are displayed. 
 
 Here is an example of a run of output:
 
@@ -36,9 +36,8 @@ Here is an example of a run of output:
 
 
 Considerations for next build:
-  - Test for memory leaks!
   - A more interactive application with commands for individual or batch pushes and pops, with option to assign data to individual elements, and refresh display of entire stack.
   - Better convention for index numbers, possibly only for use when displaying entire stack. Currently a little confusing as the first element pushed displays a (0) beside it, which could be mistaken for being the first linked list element, i.e. first element to be popped, which is incorrect. Indexes aren't as relevant for stacks, as we are always popping the top item (last in).
-  - Display 'next' field, possibly replace index with it.
-  - Seperate into two .c files, one as a general use 'stack' library function, which can be included in any other projects; another which allows an interactive environment to play with structure and provides the output described above.
+  - Display 'next' field, showing memory address, possibly replace index with this.
+  - Seperate into two .c files, one as a general use 'stack' library function, which can be included in any other projects, and another which allows an interactive environment to play with structure and provides the output described above.
   - Review comments. 
